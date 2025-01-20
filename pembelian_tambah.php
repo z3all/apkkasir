@@ -48,7 +48,7 @@ if (isset($_POST['id_pelanggan'])) {
                 <td width="200">Nama Pelanggan</td>
                 <td width="1">:</td>
                 <td>
-                    <select class="from-control from-select" name="id_pelanggan">
+                    <select class="form-control from-select" name="id_pelanggan">
                         <?php
                         $p = mysqli_query($koneksi, "SELECT*FROM pelanggan");
                         while ($pel = mysqli_fetch_array($p)) {
@@ -68,7 +68,7 @@ if (isset($_POST['id_pelanggan'])) {
                     <td><?php echo $produk['nama_produk'] . ' (Stock : ' . $produk['stock'] . ')'; ?></td>
                     <td>:</td>
                     <td>
-                        <input class="from-control" type="number"
+                        <input class="form-control" type="number"
                             step="0" value="0" max="<?php echo $produk['stock']; ?>" name="produk[<?php echo $produk['id_produk']; ?>]">
                     </td>
                 </tr>
